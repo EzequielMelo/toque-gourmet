@@ -13,3 +13,13 @@
 @theme {
   --font-Romantica: Romantica, "sans-serif";
 }
+
+body {
+  @apply bg-amber-50;
+}
+
+body::before {
+  content: "";
+  @apply absolute inset-0 bg-[url('../public/background.png')] bg-repeat -z-10;
+  opacity: 0.1;
+}
