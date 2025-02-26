@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import 'flowbite';
 import { initFlowbite } from 'flowbite';
 
 @Component({
