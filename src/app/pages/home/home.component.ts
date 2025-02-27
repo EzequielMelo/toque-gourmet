@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CarouselComponent } from "../../components/home-components/carousel/carousel.component";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
