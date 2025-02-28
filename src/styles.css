@@ -15,11 +15,11 @@
 }
 
 body {
-  @apply bg-amber-50;
+  @apply bg-amber-50 relative min-h-screen;
 }
 
 body::before {
   content: "";
-  @apply absolute inset-0 bg-[url('../public/background.png')] bg-repeat -z-10;
+  @apply absolute inset-0 bg-[url('/background.png')] bg-repeat bg-center bg-fixed -z-10;
   opacity: 0.1;
 }
