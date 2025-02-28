@@ -1,6 +1,6 @@
-<nav class="bg-white border-gray-200">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0">
-    <a class="flex items-center space-x-3 rtl:space-x-reverse">
+<nav class="bg-white border-gray-200 sticky top-0 z-50 shadow-xl">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between md:mx-auto mx-2.5 p-0">
+    <a class="flex items-center space-x-3 rtl:space-x-reverse" routerLink="/inicio">
       <img src="/logo-toque-gourmet.webp" class="h-17" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap"></span>
     </a>
@@ -17,24 +17,25 @@
       <ul
         class="font-medium flex flex-col items-center p-4 md:p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
         <li>
-          <a
+          <a routerLink="/inicio"
             class="block py-2 px-3 text-gray-900 md:bg-transparent md:p-0 border-b-2 border-green-700"
             aria-current="page">Inicio</a>
         </li>
         <li>
-          <a
-          class="block py-2 px-3 text-gray-500 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0">Servicios</a>
+          <a routerLink="/servicios"
+            class="block py-2 px-3 text-gray-500 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0">Servicios</a>
         </li>
         <li>
-          <a
+          <a routerLink="/nosotros"
             class="block py-2 px-3 text-gray-500 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0">Nosotros</a>
         </li>
         <li>
-          <a
+          <a routerLink="/faqs"
             class="block py-2 px-3 text-gray-500 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-900 md:p-0">Faqs</a>
         </li>
         <li class="m-0">
-          <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 tracking-[2%] rounded-lg px-2 py-2 me-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Contacto</button>
+          <button type="button"
+            class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 tracking-[2%] rounded-lg px-2 py-2 me-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Contacto</button>
         </li>
       </ul>
     </div>
