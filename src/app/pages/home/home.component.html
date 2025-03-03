@@ -1,11 +1,11 @@
 <app-carousel></app-carousel>
 <div class="flex justify-center">
-    <div class="pt-28 w-[90%] md:w-[60%]">
+    <div class="mt-28 w-[90%] xl:w-[60%] lg:w-[75%]">
       <div class="flex flex-col md:flex-row items-center md:items-start">
-        <div class="h-80 w-80 rounded-sm overflow-hidden">
+        <div class="h-80 w-80 xl:w-80 xl:h-80 md:w-70 md:h-70 min-w-[80px] rounded-sm overflow-hidden">
           <img class="object-cover w-full h-full" src="familia.jpg" alt="image description">
         </div>
-        <div class="mt-6 md:mt-0 md:ml-28 text-center md:text-left">
+        <div class="mt-6 md:mt-0 xl:ml-28 md:ml-14 ml-2 md:text-left flex-1">
           <h2 class="text-[#3BB551] font-Romantica text-4xl">Toque gourmet te hace la vida más fácil</h2>
           <h3 class="text-gray-900 font-semibold text-2xl mt-4">Comida rica, fresca, saludable y variada.</h3>
           <div class="text-[#A10023] mt-4 font-medium">
@@ -19,22 +19,37 @@
 </div>
 
 <div class="flex justify-center">
-    <div class="pt-28 pb-28 w-[90%] md:w-[60%]">
+    <div class="mt-28 w-[90%] xl:w-[60%] lg:w-[75%]">
       <div class="flex flex-col md:flex-row-reverse items-center md:items-start">
-        <div class="h-80 w-80 rounded-sm overflow-hidden">
+        <div class="h-80 w-80 xl:w-80 xl:h-80 md:w-70 md:h-70 min-w[80px] rounded-sm overflow-hidden">
           <img class="object-cover w-full h-full" src="viandas-2.jpg" alt="image description">
         </div>
-        <div class="flex flex-col">
-            <div class="mt-6 md:mt-0 md:mr-28 text-center md:text-left">
+        <div class="flex flex-col flex-1">
+            <div class="mt-6 md:mt-0 xl:mr-28 md:mr-14 ml-2 md:ml-0 md:text-left">
                 <h2 class="text-[#3BB551] font-Romantica text-4xl"> Adaptamos nuestras soluciones a tus necesidades.</h2>
                 <h3 class="text-gray-900 font-semibold text-2xl mt-4">Tenemos diferentes propuestas que se adaptan a cada cliente.</h3>
             </div>
-            <div class="mt-10 flex flex-col">
-                <img width="80" height="80" src="https://img.icons8.com/A10023/metro/100/exterior.png" alt="exterior"/>
-                <p class="text-[#A10023] mt-2 font-medium">Hogares</p>
-            </div>
+            <div class="mt-10 flex space-x-6 ml-2 md:ml-0">
+              <div class="flex flex-col items-center">
+                  <img width="80" height="80" src="https://img.icons8.com/A10023/metro/100/exterior.png" alt="Hogares" class="w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"/>
+                  <span class="text-[#A10023] mt-2 font-medium">Hogares</span>
+              </div>          
+              <div class="flex flex-col items-center">
+                <img width="80" height="80" src="https://img.icons8.com/A10023/metro/100/today.png" alt="Eventos" class="w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"/>
+                  <span class="text-[#A10023] mt-2 font-medium">Eventos</span>
+              </div>         
+              <div class="flex flex-col items-center">
+                  <img width="80" height="80" src="https://img.icons8.com/A10023/metro/100/organization.png" alt="Pymes" class="w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"/>
+                  <span class="text-[#A10023] mt-2 font-medium">Pymes</span>
+              </div>        
+              <div class="flex flex-col items-center">
+                <img width="80" height="80" src="https://img.icons8.com/A10023/metro/100/parliament.png" alt="Instituciones" class="w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"/>
+                <span class="text-[#A10023] mt-2 font-medium">Instituciones</span>
+              </div> 
+          </div>
         </div>     
       </div>
     </div>
 </div>
-  
+
+<app-card></app-card>
