@@ -1,11 +1,11 @@
 <app-carousel></app-carousel>
 <div class="flex justify-center">
-    <div class="mt-28 w-[90%] xl:w-[60%] lg:w-[75%]">
+    <div class="mt-28 w-[90%] xl:w-[70%] lg:w-[75%]">
       <div class="flex flex-col md:flex-row items-center md:items-start">
         <div class="h-80 w-80 xl:w-80 xl:h-80 md:w-70 md:h-70 min-w-[80px] rounded-sm overflow-hidden">
           <img class="object-cover w-full h-full" src="familia.jpg" alt="image description">
         </div>
-        <div class="mt-6 md:mt-0 xl:ml-28 md:ml-14 ml-2 md:text-left flex-1">
+        <div class="mt-6 md:mt-0 xl:ml-28 md:ml-14 ml-2 md:text-right flex-1">
           <h2 class="text-[#3BB551] font-Romantica text-4xl">Toque gourmet te hace la vida más fácil</h2>
           <h3 class="text-gray-900 font-semibold text-2xl mt-4">Comida rica, fresca, saludable y variada.</h3>
           <div class="text-[#A10023] mt-4 font-medium">
@@ -19,7 +19,7 @@
 </div>
 
 <div class="flex justify-center">
-    <div class="mt-28 w-[90%] xl:w-[60%] lg:w-[75%]">
+    <div class="mt-28 w-[90%] xl:w-[70%] lg:w-[75%]">
       <div class="flex flex-col md:flex-row-reverse items-center md:items-start">
         <div class="h-80 w-80 xl:w-80 xl:h-80 md:w-70 md:h-70 min-w[80px] rounded-sm overflow-hidden">
           <img class="object-cover w-full h-full" src="viandas-2.jpg" alt="image description">
@@ -52,4 +52,53 @@
     </div>
 </div>
 
-<app-card></app-card>
+<div class="flex justify-center">
+  <div class="mt-28 w-[90%] xl:w-[70%] lg:w-[75%]">
+    <h2 class="text-[#3BB551] font-Romantica text-4xl mb-8">Nuestros servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center md:justify-items-start">
+      <app-card
+        imageUrl="viandas.jpg"
+        title="Viandas"
+        description="Las viandas para almuerzos o cenas, se entregan diariamente listas para calentarse en microondas u horno eléctrico…">
+      </app-card>
+
+      <app-card
+        imageUrl="empanadas-pinceladas.jpg"
+        title="Eventos"
+        description="Organizamos un servicio de catering personalizado que se adapta a tus necesidades. Desde reuniones corporativas...">
+      </app-card>
+
+      <app-card
+        imageUrl="feria-gastronomica.webp"
+        title="Ferias gastronómicas"
+        description="Organizamos un servicio de catering personalizado que se adapta a tus necesidades. Desde reuniones corporativas...">
+      </app-card>
+
+      <app-card
+        imageUrl="tapeo.jpg"
+        title="Tapeos"
+        description="Comidas caseras listas para disfrutar, entregadas en prácticos tuppers reutilizables. Ideales para almuerzos y cenas saludables...">
+      </app-card>
+
+      <app-card
+        imageUrl="materia-prima.jpg"
+        title="Productos"
+        description="Trabajamos con materias primas frescas y seleccionadas con el mayor cuidado. Nos aseguramos de utilizar ingredientes de alta calidad...">
+      </app-card>
+
+      <app-card
+        imageUrl="tortilla-de-papas.jpg"
+        title="Coorporaciones"
+        description="Almuerzos o cenas que se entregan a diario, llegan frescas, refrigeradas y simplemente deben calentarse en el microondas o de preferir en hornos eléctricos...">
+      </app-card>
+    </div>
+  </div>
+</div>
+
+<div class="w-full h-30 bg-[#3BB551] mt-28 flex items-center justify-center px-4">
+  <h2 class="text-white font-Romantica xl:text-5x1 md:text-4xl sm:text-3xl text-3xl text-center">
+    Innovación en servicios gastronómicos para empresas
+  </h2>
+</div>
+
+<app-contact></app-contact>
