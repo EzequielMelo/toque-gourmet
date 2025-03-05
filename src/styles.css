@@ -21,5 +21,5 @@ body {
 body::before {
   content: "";
   @apply absolute inset-0 bg-[url('/background.png')] bg-repeat bg-center bg-fixed -z-10;
-  opacity: 0.1;
+  opacity: 0.07;
 }
