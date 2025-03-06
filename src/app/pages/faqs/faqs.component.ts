@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { HeaderComponent } from '../../components/general-components/header/header.component';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-faqs',
@@ -7,4 +8,8 @@ import { HeaderComponent } from '../../components/general-components/header/head
   templateUrl: './faqs.component.html',
   styleUrl: './faqs.component.css',
 })
-export class FaqsComponent {}
+export class FaqsComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    initFlowbite();
+  }
+}

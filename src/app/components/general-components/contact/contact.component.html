@@ -1,30 +1,128 @@
-<div class="w-full min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('contact-image.jpg');">
-    <div class="bg-white p-6 md:p-10 border shadow-xl rounded-lg w-[90%] xl xl:w-[30%] md:w-[50%]">
-        <!-- Encabezado -->
-        <h3 class="text-4xl font-bold mb-8"><span class="border-b-4 border-[#3BB551]">Contacto</span></h3>
+<div class="w-full min-h-screen bg-cover bg-center flex justify-center items-center"
+  style="background-image: url('contact-image.jpg');">
+  <div class="bg-white p-6 md:p-10 border shadow-xl rounded-lg w-[90%] xl xl:w-[30%] md:w-[50%]">
+    <!-- Encabezado -->
+    <h3 class="text-4xl font-bold mb-8"><span class="border-b-4 border-[#3BB551]">Contacto</span></h3>
 
-        <!-- Información de contacto -->
-        <div class="space-y-4 mb-4">
-            <p class="flex items-center text-gray-700 font-medium"><img width="24" height="auto" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" class="mr-2"/> Av. Corrientes 123 - (C1043) San Nicolas, CABA</p>
-            <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto" src="https://img.icons8.com/metro/100/phone.png" alt="phone" class="mr-2"/> +54 11 29912332</p>
-            <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto" src="https://img.icons8.com/windows/32/filled-message.png" alt="filled-message" class="mr-2"/> info&#64;toquegourmet.com.ar</p>
-        </div>
-
-        <!-- Formulario -->
-        <form>
-            <div class="grid grid-cols-2 gap-3">
-                <input type="text" placeholder="Nombre" class="bg-gray-100 border p-2 rounded w-full">
-                <input type="text" placeholder="Empresa" class="bg-gray-100 border p-2 rounded w-full">
-                <input type="text" placeholder="Teléfono" class="bg-gray-100 border p-2 rounded w-full">
-                <input type="text" placeholder="Email" class="bg-gray-100 border p-2 rounded w-full">
-            </div>
-            <textarea placeholder="Mensaje" class="bg-gray-100 border p-2 rounded w-full h-24 mt-6 resize-none"></textarea>
-
-            <!-- Botón de enviar -->
-            <button type="submit" class="w-full bg-[#484848] text-white py-2 mt-4 rounded hover:bg-gray-700 transition">
-                Enviar
-            </button>
-        </form>
+    <!-- Información de contacto -->
+    <div class="space-y-4 mb-4">
+      <p class="flex items-center text-gray-700 font-medium"><img width="24" height="auto"
+          src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" class="mr-2" /> Av. Corrientes 123 -
+        (C1043) San Nicolas, CABA</p>
+      <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
+          src="https://img.icons8.com/metro/100/phone.png" alt="phone" class="mr-2" /> +54 11 29912332</p>
+      <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
+          src="https://img.icons8.com/windows/32/filled-message.png" alt="filled-message" class="mr-2" />
+        info&#64;toquegourmet.com.ar</p>
     </div>
-</div>
 
+    <!-- Formulario -->
+    <form [formGroup]="contactForm">
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <input formControlName="name" type="text" placeholder="Nombre" class="bg-gray-100 border p-2 rounded w-full"
+            required name="name" id="name">
+          <label for="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
+          <div class="h-[10px]">
+            @if (contactForm.controls['name'].errors !== null &&
+            contactForm.controls['name'].touched) {
+            @if (contactForm.controls['name'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="name">Campo requerido</label>
+            }
+            @if (contactForm.controls['name'].errors!['minlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="name">Ingrese minimo 6 caracteres</label>
+            }
+            @if (contactForm.controls['name'].errors!['maxlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="name">El campo es demasiado largo</label>
+            }
+            }
+          </div>
+        </div>
+        <div>
+          <input formControlName="company" type="text" placeholder="Empresa"
+            class="bg-gray-100 border p-2 rounded w-full" required name="company" id="company">
+          <label for="company"
+            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
+          <div class="h-[10px]">
+            @if (contactForm.controls['company'].errors !== null &&
+            contactForm.controls['company'].touched) {
+            @if (contactForm.controls['company'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">Campo requerido</label>
+            }
+            @if (contactForm.controls['company'].errors!['minlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">Ingrese minimo 6 caracteres</label>
+            }
+            @if (contactForm.controls['company'].errors!['maxlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">El campo es demasiado largo</label>
+            }
+            }
+          </div>
+        </div>
+        <div>
+          <input formControlName="phone" type="text" placeholder="Teléfono"
+            class="bg-gray-100 border p-2 rounded w-full" required name="phone" id="phone">
+          <label for="phone"
+            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">DNI
+            (44.444.444)</label>
+          <div class="h-[10px]">
+            @if (contactForm.controls['phone'].errors !== null &&
+            contactForm.controls['phone'].touched) {
+            @if (contactForm.controls['phone'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="phone">Campo requerido</label>
+            }
+            @if (contactForm.controls['phone'].errors!['min']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="phone">Ingrese un numero minimo
+              valida</label>
+            }
+            @if (contactForm.controls['phone'].errors!['max']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="phone">Ingrese un numero maximo
+              valida</label>
+            }
+            }
+          </div>
+        </div>
+        <div>
+          <input formControlName="email" type="email" placeholder="Email" class="bg-gray-100 border p-2 rounded w-full"
+            required name="email" id="email">
+          <label for="email"
+            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+          <div class="h-[10px]">
+            @if (contactForm.controls['email'].errors !== null && contactForm.controls['email'].touched) {
+            @if (contactForm.controls['email'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="email">Campo requerido</label>
+            }
+            @if (contactForm.controls['email'].errors!['email']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="email">Ingrese email valido</label>
+            }
+            }
+          </div>
+        </div>
+      </div>
+      <textarea formControlName="textarea" placeholder="Mensaje"
+        class="bg-gray-100 border p-2 rounded w-full h-24 mt-6 resize-none" name="textarea" id="textarea"></textarea>
+      <label for="textarea"
+        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
+      <div class="h-[10px]">
+        @if (contactForm.controls['textarea'].errors !== null &&
+        contactForm.controls['textarea'].touched) {
+        @if (contactForm.controls['textarea'].errors!['required']) {
+        <label class="font-medium mt-1 text-xs text-red-700" for="textarea">Campo requerido</label>
+        }
+        @if (contactForm.controls['textarea'].errors!['minlength']) {
+        <label class="font-medium mt-1 text-xs text-red-700" for="textarea">Ingrese minimo 6 caracteres</label>
+        }
+        @if (contactForm.controls['textarea'].errors!['maxlength']) {
+        <label class="font-medium mt-1 text-xs text-red-700" for="textarea">El campo es demasiado largo</label>
+        }
+        }
+      </div>
+
+      <!-- Botón de enviar -->
+      <button (click)="sendContactInfo()"
+        class="w-full bg-[#484848] text-white py-2 mt-4 rounded hover:bg-gray-700 transition">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
