@@ -1,6 +1,6 @@
 <div class="w-full min-h-screen bg-cover bg-center flex justify-center items-center"
-  style="background-image: url('contact-image.jpg');">
-  <div class="bg-white p-6 md:p-10 border shadow-xl rounded-lg w-[90%] xl xl:w-[30%] md:w-[50%]">
+  style="background-image: url('contact-image.jpg');" id="seccion-contacto">
+  <div class="bg-white p-6 md:p-10 border shadow-xl rounded-lg w-[90%] xl xl:w-[30%] md:w-[50%]" id="seccion-contacto">
     <!-- Encabezado -->
     <h3 class="text-4xl font-bold mb-8"><span class="border-b-4 border-[#3BB551]">Contacto</span></h3>
 
@@ -9,9 +9,9 @@
       <p class="flex items-center text-gray-700 font-medium"><img width="24" height="auto"
           src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" class="mr-2" /> Av. Corrientes 123 -
         (C1043) San Nicolas, CABA</p>
-      <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
+      <p class="flex items-center text-[#A10023] font-medium cursor-pointer"><img width="24" height="auto"
           src="https://img.icons8.com/metro/100/phone.png" alt="phone" class="mr-2" /> +54 11 29912332</p>
-      <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
+      <p class="flex items-center text-[#A10023] font-medium cursor-pointer"><img width="24" height="auto"
           src="https://img.icons8.com/windows/32/filled-message.png" alt="filled-message" class="mr-2" />
         info&#64;toquegourmet.com.ar</p>
     </div>
@@ -120,7 +120,7 @@
 
       <!-- Botón de enviar -->
       <button (click)="sendContactInfo()"
-        class="w-full bg-[#484848] text-white py-2 mt-4 rounded hover:bg-gray-700 transition">
+        class="w-full bg-[#484848] text-white py-2 mt-4 rounded hover:bg-gray-700 transition cursor-pointer">
         Enviar
       </button>
     </form>

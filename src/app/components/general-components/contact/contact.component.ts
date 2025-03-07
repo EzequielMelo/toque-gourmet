@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +18,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   private formBuilder = inject(FormBuilder);
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.contactForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       company: [
@@ -54,6 +55,24 @@ export class ContactComponent {
       ],
     });
   }
+  
+  ngOnInit(): void {
+      this.route.fragment.subscribe(fragment => {
+        if (fragment) {
+          const element = document.getElementById(fragment);
+          if (element) {
+            const offset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
 
   sendContactInfo() {
     if (this.contactForm.invalid) {

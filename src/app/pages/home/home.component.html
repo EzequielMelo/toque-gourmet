@@ -63,29 +63,41 @@
   <div class="mt-28 w-[90%] xl:w-[70%] lg:w-[75%]">
     <h2 class="text-[#3BB551] font-Romantica text-4xl mb-8">Nuestros servicios</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-      <app-card imageUrl="viandas.jpg" title="Viandas"
-        description="Las viandas para almuerzos o cenas, se entregan diariamente listas para calentarse en microondas u horno eléctrico…">
-      </app-card>
+      <a routerLink="/servicios" fragment="seccion-viandas" routerLinkActive="active-link">
+        <app-card imageUrl="viandas.jpg" title="Viandas"
+          description="Las viandas para almuerzos o cenas, se entregan diariamente listas para calentarse en microondas u horno eléctrico…">
+        </app-card>
+      </a>
 
-      <app-card imageUrl="empanadas-pinceladas.jpg" title="Eventos"
+      <a routerLink="/servicios" fragment="seccion-eventos" routerLinkActive="active-link">
+        <app-card imageUrl="empanadas-pinceladas.jpg" title="Eventos"
         description="Organizamos un servicio de catering personalizado que se adapta a tus necesidades. Desde reuniones corporativas...">
       </app-card>
+      </a>
 
-      <app-card imageUrl="feria-gastronomica.webp" title="Ferias gastronómicas"
-        description="Organizamos un servicio de catering personalizado que se adapta a tus necesidades. Desde reuniones corporativas...">
-      </app-card>
+      <a routerLink="/servicios" fragment="seccion-ferias-gastronomicas" routerLinkActive="active-link">
+        <app-card imageUrl="feria-gastronomica.webp" title="Ferias gastronómicas"
+          description="Organizamos un servicio de catering personalizado que se adapta a tus necesidades. Desde reuniones corporativas...">
+        </app-card>
+      </a>
 
-      <app-card imageUrl="tapeo.jpg" title="Tapeos"
+      <a routerLink="/servicios" fragment="seccion-tapeos" routerLinkActive="active-link">
+        <app-card imageUrl="tapeo.jpg" title="Tapeos"
         description="Comidas caseras listas para disfrutar, entregadas en prácticos tuppers reutilizables. Ideales para almuerzos y cenas saludables...">
       </app-card>
+      </a>
 
-      <app-card imageUrl="materia-prima.jpg" title="Productos"
+      <a routerLink="/servicios" fragment="seccion-productos" routerLinkActive="active-link">
+        <app-card imageUrl="materia-prima.jpg" title="Productos"
         description="Trabajamos con materias primas frescas y seleccionadas con el mayor cuidado. Nos aseguramos de utilizar ingredientes de alta calidad...">
       </app-card>
-
-      <app-card imageUrl="tortilla-de-papas.jpg" title="Corporaciones"
+      </a>
+      
+      <a routerLink="/servicios" fragment="seccion-contrataciones" routerLinkActive="active-link">
+        <app-card imageUrl="tortilla-de-papas.jpg" title="Corporaciones"
         description="Almuerzos o cenas que se entregan a diario, llegan frescas, refrigeradas y simplemente deben calentarse en el microondas o de preferir en hornos eléctricos...">
       </app-card>
+      </a>    
     </div>
   </div>
 </div>
