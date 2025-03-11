@@ -20,21 +20,21 @@
     <form [formGroup]="contactForm">
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <input formControlName="name" type="text" placeholder="Nombre" class="bg-gray-100 border p-2 rounded w-full"
-            required name="name" id="name">
+          <input formControlName="from_name" type="text" placeholder="Nombre"
+            class="bg-gray-100 border p-2 rounded w-full" required name="name" id="name">
           <label for="name"
             class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
           <div class="h-[10px]">
-            @if (contactForm.controls['name'].errors !== null &&
-            contactForm.controls['name'].touched) {
-            @if (contactForm.controls['name'].errors!['required']) {
-            <label class="font-medium mt-1 text-xs text-red-700" for="name">Campo requerido</label>
+            @if (contactForm.controls['from_name'].errors !== null &&
+            contactForm.controls['from_name'].touched) {
+            @if (contactForm.controls['from_name'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="from_name">Campo requerido</label>
             }
-            @if (contactForm.controls['name'].errors!['minlength']) {
-            <label class="font-medium mt-1 text-xs text-red-700" for="name">Ingrese minimo 6 caracteres</label>
+            @if (contactForm.controls['from_name'].errors!['minlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="from_name">Ingrese minimo 6 caracteres</label>
             }
-            @if (contactForm.controls['name'].errors!['maxlength']) {
-            <label class="font-medium mt-1 text-xs text-red-700" for="name">El campo es demasiado largo</label>
+            @if (contactForm.controls['from_name'].errors!['maxlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="from_name">El campo es demasiado largo</label>
             }
             }
           </div>
@@ -73,11 +73,11 @@
             }
             @if (contactForm.controls['phone'].errors!['min']) {
             <label class="font-medium mt-1 text-xs text-red-700" for="phone">Ingrese un numero minimo
-              valida</label>
+              valido</label>
             }
             @if (contactForm.controls['phone'].errors!['max']) {
             <label class="font-medium mt-1 text-xs text-red-700" for="phone">Ingrese un numero maximo
-              valida</label>
+              valido</label>
             }
             }
           </div>
