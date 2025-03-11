@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import emailjs from '@emailjs/browser';
-import { environment } from '../../../../environments/environment.development';
+import { environment } from '../../../../environments/environment';
 import Swal from 'sweetalert2';
 
 @Component({
