@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-whatsapp',
@@ -18,5 +18,16 @@ export class WhatsappComponent {
   openWhatsApp() {
     const whatsappUrl = `https://wa.me/${this.phoneNumber}`;
     window.open(whatsappUrl, '_blank');
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event) {
+    const target = event.target as HTMLElement;
+    if (
+      !target.closest('.whatsapp-button') &&
+      !target.closest('.whatsapp-chat')
+    ) {
+      this.showChat = false;
+    }
   }
 }

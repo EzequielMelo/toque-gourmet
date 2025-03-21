@@ -8,4 +8,9 @@ export const environment = {
     authDomain: 'FIREBASE_AUTH_DOMAIN',
     messagingSenderId: 'FIREBASE_MESSAGING_SENDER_ID',
   },
+  emailJsConfig: {
+    serviceId: 'EMAILJS_SERVICE_ID',
+    templateId: 'EMAILJS_TEMPLATE_ID',
+    publicKey: 'EMAILJS_PUBLIC_KEY',
+  },
 };

@@ -2,7 +2,7 @@
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
     <div class="sm:flex sm:items-center sm:justify-between">
       <div class="flex flex-col items-center justify-center">
-        <img src="/logo-toque-gourmet-white.webp" class="h-17" alt="Flowbite Logo" />
+        <img src="/logo-toque-gourmet-white.webp" class="h-17" alt="Flowbite Logo" routerLink="/inicio" />
         <div class="flex flex-row items-center space-x-5 mt-3">
           <a href="https://www.instagram.com/toque_gmet/" target="_blank" rel="noopener noreferrer">
             <img width="30" height="30" src="https://img.icons8.com/FFFFFF/ios/50/instagram-new--v1.png"
@@ -12,23 +12,39 @@
         </div>
       </div>
 
-      <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-300 sm:mb-0 md:mt-5 mt-5 justify-center">
-        <li>
-          <a routerLink="/inicio" class="hover:underline me-4 md:me-6">Inicio</a>
-        </li>
-        <li>
-          <a routerLink="/servicios" class="hover:underline me-4 md:me-6">Servicios</a>
-        </li>
-        <li>
-          <a routerLink="/nosotros" class="hover:underline me-4 md:me-6">Nosotros</a>
-        </li>
-        <li>
-          <a routerLink="/faqs" class="hover:underline me-4 md:me-6">Faqs</a>
-        </li>
-      </ul>
+      <div class="flex flex-col items-center justify-center">
+        <ul
+          class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-300 sm:mb-0 md:mt-5 mt-5 justify-center">
+          <li>
+            <a routerLink="/inicio" class="hover:underline me-4 md:me-6">Inicio</a>
+          </li>
+          <li>
+            <a routerLink="/servicios" class="hover:underline me-4 md:me-6">Servicios</a>
+          </li>
+          <li>
+            <a routerLink="/nosotros" class="hover:underline me-4 md:me-6">Nosotros</a>
+          </li>
+          <li>
+            <a routerLink="/faqs" class="hover:underline me-4 md:me-6">Faqs</a>
+          </li>
+        </ul>
+        <div class="w-[100%] sm:w-[100%] flex flex-col mt-0 items-center sm:items-start sm:mt-3">
+          <h3 class="font-medium text-gray-300 text-sm">Contacto: </h3>
+          <div class="flex flex-row items-center space-x-5 mt-2">
+            <img width="20" height="20" src="https://img.icons8.com/FFFFFF/metro/100/phone.png"
+              alt="instagram-new--v1" />
+            <p class="text-gray-300 font-medium text-sm cursor-pointer">+54 11 29912332</p>
+          </div>
+          <div class="flex flex-row items-center space-x-5 mt-2">
+            <img width=" 24" height="24" src="https://img.icons8.com/FFFFFF/windows/32/filled-message.png"
+              alt="instagram-new--v1" />
+            <p class="text-gray-300 font-medium text-sm cursor-pointer">info&#64;toquegourmet.com.ar</p>
+          </div>
+        </div>
+      </div>
     </div>
     <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
-    <span class="block text-sm text-gray-300 text-center ">© 2077 <a class="hover:underline">Toque-gourmet™</a>. All
+    <span class="block text-sm text-gray-300 text-center ">© 2025 <a class="hover:underline">Toque-gourmet™</a>. All
       Rights Reserved.</span>
   </div>
 </footer>
