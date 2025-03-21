@@ -2,6 +2,13 @@
   "hosting": {
     "public": "dist/toque-gourmet/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "www.toquegourmet.com.ar",
+        "destination": "https://toquegourmet.com.ar",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
