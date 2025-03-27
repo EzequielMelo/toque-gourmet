@@ -19,6 +19,8 @@ import Swal from 'sweetalert2';
 })
 export class ContactComponent {
   contactForm: FormGroup;
+  phoneNumber: string = '5491122803583';
+
   private formBuilder = inject(FormBuilder);
 
   constructor(private route: ActivatedRoute) {
@@ -27,7 +29,6 @@ export class ContactComponent {
       company: [
         '',
         [
-          Validators.required,
           Validators.minLength(2),
           Validators.maxLength(30),
         ],
@@ -128,5 +129,10 @@ export class ContactComponent {
           });
         }
       );
+  }
+
+  openWhatsApp() {
+    const whatsappUrl = `https://wa.me/${this.phoneNumber}`;
+    window.open(whatsappUrl, '_blank');
   }
 }

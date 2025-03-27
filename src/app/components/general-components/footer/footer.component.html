@@ -1,6 +1,6 @@
 <footer class="bg-[#555454] w-[100%] m-0 shadow-sm">
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-    <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="sm:flex sm:items-center sm:justify-between flex sm:flex-row-reverse flex-col">
       <div class="flex flex-col items-center justify-center">
         <img src="/logo-toque-gourmet-white.webp" class="h-17" alt="Flowbite Logo" routerLink="/inicio" />
         <div class="flex flex-row items-center space-x-5 mt-3">
@@ -29,15 +29,15 @@
         </ul>
         <div class="w-[100%] sm:w-[100%] flex flex-col mt-0 items-center sm:items-start sm:mt-3">
           <h3 class="font-medium text-gray-300 text-sm">Contacto</h3>
-          <div class="flex flex-row items-center space-x-5 mt-2">
+          <div class="flex flex-row items-center space-x-5 mt-2 cursor-pointer">
             <img width="20" height="20" src="https://img.icons8.com/FFFFFF/metro/100/phone.png"
-              alt="instagram-new--v1" />
-            <p class="text-gray-300 font-medium text-sm cursor-pointer">+54 11 22803583</p>
+              alt="logo telefono" />
+            <p class="text-gray-300 font-medium text-sm"><button (click)="openWhatsApp()" class="cursor-pointer">+54 11 22803583</button></p>
           </div>
-          <div class="flex flex-row items-center space-x-5 mt-2">
+          <div class="flex flex-row items-center space-x-5 mt-2 cursor-pointer">
             <img width=" 24" height="24" src="https://img.icons8.com/FFFFFF/windows/32/filled-message.png"
-              alt="instagram-new--v1" />
-            <p class="text-gray-300 font-medium text-sm cursor-pointer">info&#64;toquegourmet.com.ar</p>
+              alt="logo correo"/>
+            <p class="text-gray-300 font-medium text-sm cursor-pointer"><a href="mailto:adm.polo.murguiondo&#64;gmail.com">adm.polo.murguiondo&#64;gmail.com</a></p>
           </div>
         </div>
       </div>
