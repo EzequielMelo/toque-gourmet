@@ -7,7 +7,7 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrl: './whatsapp.component.css',
 })
 export class WhatsappComponent {
-  @Input() phoneNumber: string = '5491123456789';
+  @Input() phoneNumber: string = '5491122803583';
 
   showChat: boolean = false; // Controla la visibilidad de la ventana de chat
 
