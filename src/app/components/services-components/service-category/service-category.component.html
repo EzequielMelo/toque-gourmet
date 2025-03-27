@@ -7,7 +7,7 @@
   <div class="w-full md:w-[60%] lg:w-[70%] sm:ml-14 lg:ml-28 items-start">
     <h2 class="text-[#3BB551] font-Romantica text-4xl">{{title}}</h2>
     <div class="text-[#656565] mt-4 font-medium">
-      <p class="text-pretty">{{description}}</p>
+      <p class="text-pretty" [innerHTML]="description">{{description}}</p>
     </div>
   </div>
 </div>
