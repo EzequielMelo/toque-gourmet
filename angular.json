@@ -29,7 +29,12 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": false
+                }
+              },
               "budgets": [
                 {
                   "type": "initial",
