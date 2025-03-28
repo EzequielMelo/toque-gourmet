@@ -7,14 +7,14 @@
       <img src="carousel_item1.webp"
         class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none lg:right-0 bottom-30 md:bottom-auto md:top-1/2 md:transform md:-translate-y-1/2 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-start rounded-md">
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto md:top-auto sm:transform-none sm:right-0 sm:bottom-10 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%]  flex flex-col items-center sm:items-start rounded-md">
         <div>
-          <h2 class="text-4xl font-bold">Soluciones gastronómicas para optimizar tiempos y costos sin perder
-            calidad
-          </h2>
+          <h2 class="text-4xl font-bold">Soluciones Gastronómicas Inteligentes</h2>
+          <p class="mt-6 font-medium">Soluciones gastronómicas para optimizar tiempos y costos sin perder calidad</p>
         </div>
         <div class="flex w-[100%] justify-center mt-8">
-          <button class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg ">Consultanos</button>
+          <button (click)="navigateToContact()"
+            class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg cursor-pointer">Consultanos</button>
         </div>
       </div>
     </div>
@@ -23,12 +23,16 @@
       <img src="carousel_item2.webp"
         class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none lg:right-0 bottom-30 md:bottom-auto md:top-1/2 md:transform md:-translate-y-1/2 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-start rounded-md">
-        <div>
-          <h2 class="text-4xl font-bold">Viandas corporativas</h2>
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto sm:transform-none sm:right-0 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-center sm:items-start rounded-md">
+        <div class="text-center sm:text-left">
+          <h2 class="text-3xl sm:text-4xl font-bold">Viandas corporativas</h2>
+          <p class="mt-4 sm:mt-6 font-medium">
+            Alimentación saludable y equilibrada para empresas, optimizando tiempos y costos sin perder calidad
+          </p>
         </div>
         <div class="flex w-[100%] justify-center mt-8">
-          <button class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg ">Consultanos</button>
+          <button (click)="navigateToContact()"
+            class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg cursor-pointer">Consultanos</button>
         </div>
       </div>
     </div>
@@ -37,13 +41,15 @@
       <img src="carousel_item3.webp"
         class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none lg:right-0 bottom-30 md:bottom-auto md:top-1/2 md:transform md:-translate-y-1/2 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-start rounded-md">
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto sm:transform-none sm:right-0 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-center sm:items-start rounded-md">
         <div>
-          <h2 class="text-4xl font-bold">Propuestas gastronómicas que acompañan la idea de nuestros clientes para lograr
-            una experiencia única</h2>
+          <h2 class="text-4xl font-bold">Gastronomía que Refleja tu Visión</h2>
+          <p class="mt-6 font-medium">Propuestas gastronómicas que acompañan la idea de nuestros clientes para lograr
+            una experiencia única</p>
         </div>
         <div class="flex w-[100%] justify-center mt-8">
-          <button class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg ">Consultanos</button>
+          <button (click)="navigateToContact()"
+            class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg cursor-pointer">Consultanos</button>
         </div>
       </div>
     </div>
@@ -52,7 +58,7 @@
       <img src="carousel_item4.webp"
         class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none lg:right-0 bottom-30 md:bottom-auto md:top-1/2 md:transform md:-translate-y-1/2 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-start rounded-md">
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-auto sm:transform-none sm:right-0 bg-black/60 text-white p-6 xl:w-1/4 md:w-2/5 sm:w-18/21 w-[90%] flex flex-col items-center sm:items-start rounded-md">
         <div>
           <h2 class="text-4xl font-bold">La solucion ideal para tus comidas</h2>
           <p class="mt-6 font-medium">Servicios y productos para locales gastronómicos</p>
@@ -60,7 +66,8 @@
           <p class="mt-6 font-medium">Servicio de asistencia técnica para armado de menú a la carta</p>
         </div>
         <div class="flex w-[100%] justify-center mt-8">
-          <button class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg ">Consultanos</button>
+          <button (click)="navigateToContact()"
+            class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg rounded-lg cursor-pointer">Consultanos</button>
         </div>
       </div>
     </div>

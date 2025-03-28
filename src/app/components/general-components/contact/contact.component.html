@@ -7,20 +7,21 @@
     <!-- Información de contacto -->
     <div class="space-y-4 mb-4">
       <p class="flex items-center text-gray-700 font-medium"><img width="24" height="auto"
-         src="https://img.icons8.com/ios/100/marker--v1.png" alt="marker--v1" class="mr-2"/> Liniers - Ciudad autónoma de Buenos Aires.</p>
+          src="https://img.icons8.com/ios/100/marker--v1.png" alt="marker--v1" class="mr-2" /> Liniers - Ciudad autónoma
+        de Buenos Aires.</p>
+      <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
+          src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="phone" class="mr-2" />
+        <a href="https://www.instagram.com/toque_gmet/" target="_blank">toque_gmet</a>
+      </p>
       <p class="items-center text-[#A10023] font-medium">
         <button (click)="openWhatsApp()" class="cursor-pointer flex flex-row">
-          <img width="24" height="auto"
-         src="https://img.icons8.com/ios/100/phone--v1.png" alt="phone--v1" class="mr-2"/>+54 11 22803583
+          <img width="24" height="auto" src="https://img.icons8.com/ios/100/phone--v1.png" alt="phone--v1"
+            class="mr-1" />+54 11 22803583
         </button>
       </p>
-      <p class="flex items-center text-[#A10023] font-medium cursor-pointer"><img width="24" height="auto"
-         src="https://img.icons8.com/ios/100/filled-message.png" alt="filled-message" class="mr-2"/>
-         <a href="mailto:adm.polo.murguiondo&#64;gmail.com">adm.polo.murguiondo&#64;gmail.com</a>
-      </p>
       <p class="flex items-center text-[#A10023] font-medium"><img width="24" height="auto"
-        src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="phone" class="mr-2" />
-        <a href="https://www.instagram.com/toque_gmet/" target="_blank">&#64;toque_gmet</a>
+          src="https://img.icons8.com/ios/100/filled-message.png" alt="filled-message" class="mr-2" />
+        <a href="mailto:adm.polo.murguiondo&#64;gmail.com">adm.polo.murguiondo&#64;gmail.com</a>
       </p>
     </div>
 
@@ -30,8 +31,6 @@
         <div>
           <input formControlName="from_name" type="text" placeholder="Nombre"
             class="bg-gray-100 border p-2 rounded w-full" required name="name" id="name">
-          <label for="name"
-            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
           <div class="h-[10px]">
             @if (contactForm.controls['from_name'].errors !== null &&
             contactForm.controls['from_name'].touched) {
@@ -48,28 +47,26 @@
           </div>
         </div>
         <div>
-          <input formControlName="company" type="text" placeholder="Empresa"
+          <input formControlName="company" type="text" placeholder="Empresa o Personal"
             class="bg-gray-100 border p-2 rounded w-full" required name="company" id="company">
-          <label for="company"
-            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
           <div class="h-[10px]">
             @if (contactForm.controls['company'].errors !== null &&
-            contactForm.controls['company'].touched) {       
-              @if (contactForm.controls['company'].errors!['minlength']) {
-              <label class="font-medium mt-1 text-xs text-red-700" for="company">Ingrese minimo 2 caracteres</label>
-              }
-              @if (contactForm.controls['company'].errors!['maxlength']) {
-              <label class="font-medium mt-1 text-xs text-red-700" for="company">El campo es demasiado largo</label>
-              }
+            contactForm.controls['company'].touched) {
+            @if (contactForm.controls['company'].errors!['required']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">Campo requerido</label>
+            }
+            @if (contactForm.controls['company'].errors!['minlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">Ingrese minimo 2 caracteres</label>
+            }
+            @if (contactForm.controls['company'].errors!['maxlength']) {
+            <label class="font-medium mt-1 text-xs text-red-700" for="company">El campo es demasiado largo</label>
+            }
             }
           </div>
         </div>
         <div>
           <input formControlName="phone" type="text" placeholder="Teléfono"
             class="bg-gray-100 border p-2 rounded w-full" required name="phone" id="phone">
-          <label for="phone"
-            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">DNI
-            (44.444.444)</label>
           <div class="h-[10px]">
             @if (contactForm.controls['phone'].errors !== null &&
             contactForm.controls['phone'].touched) {
@@ -90,8 +87,6 @@
         <div>
           <input formControlName="email" type="email" placeholder="Email" class="bg-gray-100 border p-2 rounded w-full"
             required name="email" id="email">
-          <label for="email"
-            class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
           <div class="h-[10px]">
             @if (contactForm.controls['email'].errors !== null && contactForm.controls['email'].touched) {
             @if (contactForm.controls['email'].errors!['required']) {
