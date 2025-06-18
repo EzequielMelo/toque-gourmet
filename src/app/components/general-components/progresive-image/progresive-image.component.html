@@ -1,0 +1,17 @@
+<div class="relative w-full h-full overflow-hidden">
+  <!-- Imagen blur -->
+  <img
+    [src]="imageUrlSmall"
+    class="absolute inset-0 w-full h-full object-cover blur-sm scale-105 transition-opacity duration-700"
+    [class.opacity-0]="loaded"
+  />
+
+  <!-- Imagen real -->
+  <img
+    [src]="imageUrl"
+    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+    loading="lazy"
+    [class.opacity-0]="!loaded"
+    (load)="onLoad()"
+  />
+</div>

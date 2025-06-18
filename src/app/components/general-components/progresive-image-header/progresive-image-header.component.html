@@ -1,0 +1,21 @@
+<div class="relative w-full h-full overflow-hidden">
+  <!-- Imagen blur -->
+  <img
+    *ngIf="!loaded"
+    [src]="imageUrlSmall"
+    [alt]="alt"
+    [ngStyle]="{ 'object-position': '50% ' + (height || '50%') }"
+    class="w-full h-full object-cover blur-sm scale-105 transition-opacity duration-900"
+  />
+
+  <!-- Imagen real -->
+  <img
+    [src]="imageUrl"
+    [alt]="alt"
+    [ngStyle]="{ 'object-position': '50% ' + (height || '50%') }"
+    class="w-full h-full object-cover blur-[2px] transition-opacity duration-900"
+    loading="lazy"
+    [class.opacity-0]="!loaded"
+    (load)="onLoad()"
+  />
+</div>

@@ -1,10 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { initFlowbite } from 'flowbite';
+import { ProgresiveImageComponent } from '../../general-components/progresive-image/progresive-image.component';
 
 @Component({
   selector: 'app-carousel',
-  imports: [],
+  imports: [ProgresiveImageComponent],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css',
 })

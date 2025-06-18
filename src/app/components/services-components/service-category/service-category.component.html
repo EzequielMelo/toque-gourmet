@@ -1,13 +1,20 @@
-<div class="flex items-center flex-col-reverse md:flex-row mt-10 lg:mt-5 md:mt-10 w-full">
+<div
+  class="flex items-center flex-col-reverse md:flex-row mt-10 lg:mt-5 md:mt-10 w-full"
+>
   <div class="w-full md:w-[40%] lg:w-[30%] mt-5 md:mt-0 flex justify-center">
     <div class="h-80 w-80 rounded-full overflow-hidden">
-      <img class="object-cover w-full h-full" [src]="image" alt="image description">
+      <img
+        class="object-cover w-full h-full"
+        [src]="image"
+        alt="image description"
+        loading="lazy"
+      />
     </div>
   </div>
   <div class="w-full md:w-[60%] lg:w-[70%] sm:ml-14 lg:ml-28 items-start">
-    <h2 class="text-[#3BB551] font-Romantica text-4xl">{{title}}</h2>
+    <h2 class="text-[#3BB551] font-Romantica text-4xl">{{ title }}</h2>
     <div class="text-[#656565] mt-4 font-medium">
-      <p class="text-pretty" [innerHTML]="description">{{description}}</p>
+      <p class="text-pretty" [innerHTML]="description">{{ description }}</p>
     </div>
   </div>
 </div>
